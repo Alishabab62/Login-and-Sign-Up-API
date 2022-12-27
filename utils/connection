@@ -1,0 +1,16 @@
+const mongoose = require('mongoose')
+
+const connection = ()=>{
+    try {
+        mongoose.connect(process.env.MON).then((message)=>{
+         console.log(`Mongo is listening at port ${message.connection.host}`)
+     })
+     } catch (error) {
+         console.log(error)
+     }
+}
+
+
+
+
+module.exports=connection
