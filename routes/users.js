@@ -14,7 +14,7 @@ router.post('/signup', async (req,res)=>{
     if (!user) {
           const data= new User(receivedData)
       await data.save()
-      res.status(200).json(data)
+      res.status(200).json({(message:"sucessfully")})
     }
     else{
       res.json('User already Registered!')
