@@ -8,12 +8,12 @@ var router = express.Router();
 router.post('/signup', async (req,res)=>{
   try {
     const receivedData = req.body
-    const data= new User(receivedData)
 
     console.log(receivedData)
     const user= await User.findOne({mobileNumber: receivedData.mobileNumber})
     if (!user) {
-      await data.save()
+          const data= new User(receivedData)
+       data.save()
       res.status(200).json(data)
     }
     else{
