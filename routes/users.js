@@ -13,7 +13,7 @@ router.post('/signup', async (req,res)=>{
     const user= await User.findOne({mobileNumber: receivedData.mobileNumber})
     if (!user) {
           const data= new User(receivedData)
-       data.save()
+      await data.save()
       res.status(200).json(data)
     }
     else{
