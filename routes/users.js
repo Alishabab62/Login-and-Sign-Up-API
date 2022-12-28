@@ -28,7 +28,7 @@ router.post('/signup', async (req,res)=>{
 
 
 
-router.get('/login', async(req,res)=>{
+router.post('/login', async(req,res)=>{
   var success=false
   const {mobileNumber}= req.body
   try {
