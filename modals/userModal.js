@@ -19,7 +19,7 @@ email:{
     type:String,
 },
 gender:{ type: String,
-    enum: [ "male", "female" ]
+    
 },
 alternate_phoneNumber:{
     type:Number,
