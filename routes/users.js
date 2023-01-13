@@ -37,7 +37,7 @@ router.post('/login', async(req,res)=>{
       res.json('User not exists!')
     }
     else{
-      res.json({success:true})
+      res.json('success')
 
     }
   } catch (error) {
