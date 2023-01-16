@@ -32,7 +32,7 @@ router.post('/login', async(req,res)=>{
   var success=false
   const {mobileNumber}= req.body
   try {
-    const user= await User.findOne({mobileNumber})
+    const user= await User.findOne({mobileNumber:mobileNumber})
     if (!user) {
       res.status(200).json({message:'User not exists!'})
     }
