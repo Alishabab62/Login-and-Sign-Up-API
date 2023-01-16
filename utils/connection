@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const connection = ()=>{
     try {
-        mongoose.connect(process.env.MON).then((message)=>{
+        mongoose.connect('mongodb+srv://alishabab62:alishabab6569@cluster0.udpfyhx.mongodb.net/?retryWrites=true&w=majority').then((message)=>{
          console.log(`Mongo is listening at port ${message.connection.host}`)
      })
      } catch (error) {
